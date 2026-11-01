@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voos | Aeroporto José Cleto</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="container cabecalho-conteudo">
+            <a class="marca" href="index.html">
+                <span class="marca-simbolo">✈</span>
+                <span>
+                    <strong>Aeroporto Municipal</strong>
+                    <small>Prefeito José Cleto</small>
+                </span>
+            </a>
+
+            <nav class="menu">
+                <a href="index.html">Início</a>
+                <a href="voos.html">Voos</a>
+                <a href="servicos.html">Serviços</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="informacoes.html">Informações</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="titulo-pagina">
+            <div class="container">
+                <div class="migalhas"><a href="index.html">Início</a> / Voos</div>
+                <h1>Voos</h1>
+                <p>Consulte as partidas e chegadas de nosso aeroporto nesta página.</p>
+            </div>
+        </section>
+
+        <section class="secao">
+            <div class="container">
+                <h2 class="titulo-secao">Mapa de aeronaves em tempo real</h2>
+                <p class="descricao-secao">O mapa abaixo é fornecido por um serviço externo de rastreamento. A cobertura pode variar na região e nem todas as aeronaves ou operações aparecem no mapa.</p>
+            
+                <div class="incorporacao incorporacao-voos">
+                    <iframe
+                        title="Mapa externo de rastreamento de aeronaves na região de União da Vitória"
+                        src="https://globe.adsbexchange.com/?lat=-26.23&lon=-51.08&zoom=8"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <p class="texto-pequeno">Mapa externo do ADS-B Exchange. Se o provedor bloquear a exibição incorporada, <a href="https://globe.adsbexchange.com/?lat=-26.23&lon=-51.08&zoom=8" target="_blank" rel="noopener noreferrer">abra o mapa em uma nova aba</a>. A cobertura varia e nem todas as aeronaves aparecem; este mapa não é um painel oficial de partidas e chegadas.</p>
+                <div class="aviso"><strong>Atenção:</strong> o rastreamento de aeronaves não é um painel oficial de partidas e chegadas. Consulte o operador responsável para confirmar informações de voo.</div>
+            </div>
+        </section>
+
+        <section class="secao">
+            <div class="container">
+                <h2 class="titulo-secao">Tabela de voos</h2>
+
+                <div class="tabela-conteudo">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Voo</th>
+                                <th scope="col">Tipo</th>
+                                <th scope="col">Origem / destino</th>
+                                <th scope="col">Horário</th>
+                                <th scope="col">Situação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>UV 102</td><td>Partida</td><td>Curitiba</td><td>08:30</td><td><span class="status status-previsto">Previsto</span></td>
+                            </tr>
+                            <tr>
+                                <td>UV 205</td><td>Chegada</td><td>São Paulo</td><td>09:15</td><td><span class="status status-embarque">Embarque</span></td>
+                            </tr>
+                            <tr>
+                                <td>UV 318</td><td>Partida</td><td>Florianópolis</td><td>11:40</td><td><span class="status status-previsto">Previsto</span></td>
+                            </tr>
+                            <tr>
+                                <td>UV 421</td><td>Chegada</td><td>Curitiba</td><td>14:05</td><td><span class="status status-previsto">Previsto</span></td>
+                            </tr>
+                            <tr>
+                                <td>UV 506</td><td>Partida</td><td>Porto Alegre</td><td>17:20</td><td><span class="status status-previsto">Previsto</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <div class="rodape-conteudo">
+                <div>
+                    <strong>Aeroporto Municipal Prefeito José Cleto</strong>
+                    <p>União da Vitória — Paraná</p>
+                </div>
+                <nav class="rodape-links">
+                    <a href="index.html">Início</a>
+                    <a href="voos.html">Voos</a>
+                    <a href="servicos.html">Serviços</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="informacoes.html">Informações</a>
+                </nav>
+            </div>
+            <div class="copyright">Projeto acadêmico demonstrativo. Desenvolvimento Web - Sistemas de Informação | 1º Ano.</div>
+        </div>
+    </footer>
+</body>
+</html>

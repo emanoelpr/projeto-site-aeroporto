@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações | Aeroporto José Cleto</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="container cabecalho-conteudo">
+            <a class="marca" href="index.html">
+                <span class="marca-simbolo">✈</span>
+                <span>
+                    <strong>Aeroporto Municipal</strong>
+                    <small>Prefeito José Cleto</small>
+                </span>
+            </a>
+
+            <nav class="menu">
+                <a href="index.html">Início</a>
+                <a href="voos.html">Voos</a>
+                <a href="servicos.html">Serviços</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="informacoes.html">Informações</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="titulo-pagina fundo-informacoes">
+            <div class="container">
+                <h1>Informações para passageiros</h1>
+                <p>Orientações gerais para ajudar na organização da viagem.</p>
+            </div>
+        </section>
+
+        <section class="secao">
+            <div class="container duas-colunas">
+                <div>
+                    <h2 class="titulo-secao">Perguntas frequentes</h2>
+                    <p class="descricao-secao">Clique em cada pergunta para abrir ou fechar a resposta.</p>
+
+                    <details>
+                        <summary>Quais documentos devo levar?</summary>
+                        <p>Para viagens nacionais, os passageiros devem apresentar um documento oficial de identificação com foto, em bom estado de conservação e dentro das condições exigidas para o embarque. Para viagens internacionais, é necessário verificar a exigência de passaporte, visto e outros documentos conforme o país de destino. Crianças e adolescentes podem ter exigências específicas.</p>
+                    </details>
+                    <details>
+                        <summary>Quais são as orientações sobre bagagem?</summary>
+                        <p>As regras de bagagem variam conforme a companhia aérea, o tipo de passagem e o destino. Antes da viagem, confira os limites de peso e dimensões para bagagens de mão e despachadas. Também é importante verificar quais objetos podem ser transportados e quais possuem restrições.</p>
+                    </details>
+                    <details>
+                        <summary>Com quanto tempo de antecedência devo chegar?</summary>
+                        <p>O horário recomendado depende do destino e das orientações da empresa responsável pelo transporte. Em viagens aéreas, é importante chegar com antecedência suficiente para realizar os procedimentos de identificação, despacho de bagagem e embarque. Consulte sempre o horário indicado no bilhete e as orientações da companhia.</p>
+                    </details>
+                    <details>
+                        <summary>Quais objetos podem ser proibidos?</summary>
+                        <p>Objetos cortantes, materiais inflamáveis, explosivos e determinadas substâncias químicas podem ter o transporte proibido ou sujeito a restrições. As regras podem variar conforme o tipo de bagagem e o trajeto. Consulte as normas de segurança antes de organizar seus pertences.</p>
+                    </details>
+                    <details>
+                        <summary>Como o clima pode afetar uma viagem?</summary>
+                        <p>Condições meteorológicas como chuva intensa, neblina, ventos fortes e tempestades podem interferir na segurança e na operação de voos. Em determinadas situações, podem ocorrer atrasos, alterações de horário ou cancelamentos. Por isso, é importante acompanhar as condições do tempo e consultar a empresa responsável pela viagem.</p>
+                    </details>
+                    <details>
+                        <summary>Onde encontro informações atualizadas sobre o voo?</summary>
+                        <p>Para consultar horários, alterações, atrasos ou cancelamentos, entre em contato diretamente com a companhia aérea responsável pela operação ou consulte seus canais oficiais.</p>
+                    </details>
+                </div>
+
+                <aside class="cartao cartao-meteorologia">
+                    <h2 class="titulo-secao">Condições meteorológicas</h2>
+                    <p class="texto-pequeno">Mapa meteorológico para a região de União da Vitória — PR.</p>
+                    <div class="incorporacao incorporacao-clima">
+                        <iframe
+                            title="Mapa meteorológico do Windy centrado em União da Vitória, Paraná"
+                            src="https://embed.windy.com/embed2.html?lat=-26.23&lon=-51.08&detailLat=-26.23&detailLon=-51.08&width=650&height=450&zoom=8&level=surface&overlay=wind&product=ecmwf&menu=&message=true&marker=true&calendar=now&pressure=true&type=map&location=coordinates&detail=&metricWind=km%2Fh&metricTemp=%C2%B0C"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <p>Use os controles do mapa para consultar vento, temperatura e outras camadas disponíveis.</p>
+                    <p class="texto-pequeno">Os dados são fornecidos pelo serviço externo e dependem de conexão com a internet.</p>
+                    <a class="link-cartao" href="https://www.windy.com/?-26.23,-51.08,8" target="_blank" rel="noopener noreferrer">Abrir mapa meteorológico completo →</a>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <div class="rodape-conteudo">
+                <div>
+                    <strong>Aeroporto Municipal Prefeito José Cleto</strong>
+                    <p>União da Vitória — Paraná</p>
+                </div>
+                <nav class="rodape-links">
+                    <a href="index.html">Início</a>
+                    <a href="voos.html">Voos</a>
+                    <a href="servicos.html">Serviços</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="informacoes.html">Informações</a>
+                </nav>
+            </div>
+            <div class="copyright">Projeto acadêmico demonstrativo. Desenvolvimento Web - Sistemas de Informação | Emanoel do Prado | 1º Ano.</div>
+        </div>
+    </footer>
+</body>
+</html>

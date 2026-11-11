@@ -1,0 +1,591 @@
+/* 1. Cores principais do projeto */
+:root { /* variaveis na raiz do site*/
+    --azul-escuro: #0a192f;
+    --azul: #1a56db;
+    --fundo: #f4f7fb;
+    --branco: #ffffff;
+    --texto: #1e293b;
+    --texto-suave: #64748b;
+    --borda: #dbe3ee;
+    --verde-fundo: #d1fae5;
+    --verde-texto: #065f46;
+    --azul-fundo: #e0f2fe;
+    --azul-texto: #0369a1;
+    --vermelho-texto: #991b1b;
+    --vermelho-fundo: #fee2e2;
+}
+
+/* 2. Configurações básicas */
+* {
+    box-sizing: border-box; /* padding e borda incluidas juntas*/
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--texto);
+    background-color: var(--fundo);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--azul);
+}
+
+a:focus, /* O link recebe um contorno azul ao redor*/
+summary:focus {
+    outline: 3px solid #93c5fd;  /* contorno ao redor do elemento, sem ocupar espaço no layout como a borda*/
+    outline-offset: 3px; /* distancia entre um elemento e o contorno*/
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* 3. Cabeçalho e menu de navegação */
+.cabecalho {
+    background-color: var(--branco);
+    border-bottom: 1px solid var(--borda);
+}
+
+.cabecalho-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px; /* espaço entre elementos de um container quando se usa flex ou grid*/
+    padding: 16px 0;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--azul-escuro);
+    text-decoration: none;
+}
+
+.marca-simbolo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    color: var(--branco);
+    background-color: var(--azul);
+    font-size: 25px;
+}
+
+.marca strong,
+.marca small {
+    display: block; /* ocupa toda a largura e começa uma nova linha*/
+}
+
+.marca strong {
+    font-size: 15px;
+    line-height: 1.3;
+}
+
+.marca small {
+    margin-top: 3px;
+    color: var(--texto-suave);
+    font-size: 12px;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.menu a {
+    padding: 9px 11px;
+    border-radius: 6px;
+    color: var(--texto);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.menu a:hover,
+.menu a.atual {
+    color: var(--azul);
+    background-color: #eff6ff;
+}
+
+/* 4. Área principal de destaque da página inicial */
+.destaque {
+    padding: 64px 0;
+    color: var(--branco);
+    background: linear-gradient(rgba(10, 25, 47, 0.75), rgba(10, 25, 47, 0.75)),
+    url("https://wallpapercave.com/wp/wp4233010.jpg") center / cover no-repeat;
+}
+
+.destaque-conteudo {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr; /* quantas colenas terá, e o espaço de cada coluna*/
+    align-items: center;
+    gap: 36px;
+}
+
+.etiqueta {
+    color: #bfdbfe;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.destaque h1 {
+    max-width: 650px;
+    margin: 12px 0;
+    font-size: clamp(30px, 4vw, 46px); /* tamanho minimo, preferido e maximo, vw (viewport width) é varia conforme a largura da janela*/
+    line-height: 1.15;
+}
+
+.destaque p {
+    max-width: 570px;
+    color: #e2e8f0;
+}
+
+.acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 11px 17px;
+    border: 1px solid var(--azul);
+    border-radius: 6px;
+    background-color: var(--azul);
+    color: var(--branco);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.botao:hover {
+    background-color: #1648bd;
+}
+
+.botao-claro {
+    border-color: #94a3b8;
+    background-color: transparent;
+    color: var(--branco);
+}
+
+.botao-claro:hover {
+    background-color: #ffffff18;
+}
+
+/* 5. Cartão simples com exemplos de voos */
+.cartao-voos {
+    padding: 22px;
+    border-radius: 12px;
+    color: var(--texto);
+    background-color: var(--branco);
+    box-shadow: 0 12px 30px #00000020;
+}
+
+.cartao-voos h2 {
+    margin: 0;
+    font-size: 21px;
+}
+
+.texto-pequeno {
+    color: #1f2937;
+    font-size: 13px;
+}
+
+.voo-resumo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--borda);
+}
+
+.voo-resumo:last-of-type { /* ultimo elemento */
+    border-bottom: 0;
+}
+
+.voo-resumo strong,
+.voo-resumo span {
+    display: block;
+}
+
+.voo-resumo span {
+    color: var(--texto-suave);
+    font-size: 13px;
+}
+
+.status {
+    display: inline-block;
+    padding: 4px 9px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap; /* como os espaços em branco são tratados, nowrap impede a quebra em varias linhas*/
+}
+
+.status-previsto {
+    color: var(--azul-texto);
+    background-color: var(--azul-fundo);
+}
+
+.status-embarque {
+    color: var(--verde-texto);
+    background-color: var(--verde-fundo);
+}
+
+.status-atrasado {
+    color: var(--vermelho-texto);
+    background-color: var(--vermelho-fundo);
+}
+
+/* 6. Seções, títulos e cartões */
+.secao {
+    padding: 44px 0;
+}
+
+.secao-fundo-branco {
+    background-color: var(--branco);
+}
+
+.titulo-secao {
+    margin: 0 0 8px;
+    color: var(--azul-escuro);
+    font-size: 28px;
+    line-height: 1.25;
+}
+
+.descricao-secao {
+    max-width: 700px;
+    margin: 0 0 24px;
+    color: var(--texto-suave);
+}
+
+.grade {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.grade-quatro {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.cartao {
+    padding: 22px;
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    background-color: var(--branco);
+}
+
+.cartao h3 {
+    margin: 8px 0;
+    color: var(--azul-escuro);
+    font-size: 18px;
+}
+
+.cartao p {
+    margin-bottom: 0;
+    color: var(--texto-suave);
+    font-size: 14px;
+}
+
+.cartao-icone {
+    font-size: 27px;
+}
+
+.link-cartao {
+    display: inline-block;
+    margin-top: 12px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* 7. Títulos usados nas páginas internas */
+.titulo-pagina {
+    padding: 34px 0;
+    border-bottom: 1px solid var(--borda);
+}
+
+.titulo-pagina h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 34px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.titulo-pagina p {
+    color: #e2e8f0;
+    max-width: 700px;
+    margin-bottom: 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.fundo-mapa {
+    background: linear-gradient(rgba(10, 25, 27, 0.75), rgba(10, 25, 47, 0.75)),
+    url("https://static.vecteezy.com/system/resources/previews/024/518/502/large_2x/plane-is-flying-in-the-sky-above-the-clouds-ai-generated-free-photo.jpg") center / cover no-repeat;
+}
+
+.fundo-servicos {
+    background: linear-gradient(rgba(10, 25, 27, 0.75), rgba(10, 25, 47, 0.75)),
+    url("https://img.freepik.com/premium-photo/interior-modern-airport-terminal_1089297-2860.jpg?w=2000") center / cover no-repeat;
+}
+
+.fundo-sobre {
+    background: linear-gradient(rgba(10, 25, 27, 0.75), rgba(10, 25, 47, 0.75)),
+    url("https://cdn.mos.cms.futurecdn.net/DmnuMhXN7hjSewMxiu72ee.jpg") center / cover no-repeat;
+}
+
+.fundo-informacoes {
+    background: linear-gradient(rgba(10, 25, 27, 0.75), rgba(10, 25, 47, 0.75)),
+    url("https://th.bing.com/th/id/R.520e6a2da78075c4a7ffa02f476b14e2?rik=LYwU16lLaHcjfw&riu=http%3a%2f%2fidahofallsidaho.gov%2fPhotoGallery%2f2%2fWorkers+on+the+Tarmac.jpg&ehk=i8bjAYMMhhyQimQFm%2fTHn2xgVkblyNXwjvsRo1ayrz8%3d&risl=&pid=ImgRaw&r=0") center / cover no-repeat;
+}
+
+/* 8. Tabelas */
+.tabela-conteudo {
+    overflow-x: auto;
+    border: 1px solid var(--borda);
+    border-radius: 9px;
+    background-color: var(--branco);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.legenda-tabela {
+    padding: 12px 16px;
+    color: var(--texto-suave);
+    font-size: 13px;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--borda);
+    white-space: nowrap;
+}
+
+th {
+    color: var(--azul-escuro);
+    background-color: #f1f5f9;
+    font-size: 13px;
+}
+
+td {
+    font-size: 14px;
+}
+
+tr:last-child td {
+    border-bottom: 0;
+}
+
+/* 9. Colunas com conteúdo lado a lado */
+.duas-colunas {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.lista-dados {
+    margin: 0;
+    padding: 0;
+    list-style: none; /* remove os marcadores */
+}
+
+.lista-dados li {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--borda);
+}
+
+.lista-dados li:last-child {
+    border-bottom: 0;
+}
+
+/* 10. Perguntas expansíveis. O próprio HTML controla abrir e fechar. */
+details {
+    margin-bottom: 12px;
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    background-color: var(--branco);
+}
+
+summary {
+    padding: 15px 18px;
+    color: var(--azul-escuro);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+details p {
+    margin: 0;
+    padding: 0 18px 18px;
+    color: var(--texto-suave);
+}
+
+/* 11. Avisos e informações de contato */
+.aviso {
+    margin-top: 18px;
+    padding: 15px 18px;
+    border-left: 4px solid var(--azul);
+    border-radius: 5px;
+    background-color: #eaf1fb;
+    color: var(--texto);
+}
+
+.contato-grade {
+    display: grid; /*em grade*/
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+/* 12. Mapas externos: voos e meteorologia */
+.incorporacao {
+    width: 100%;
+    overflow: hidden; /* qualquer elemento que saia dos limites da caixa são cortados da exibição */
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    background-color: var(--branco);
+}
+
+.incorporacao iframe {
+    display: block;
+    width: 100%;
+    height: 480px;
+    border: 0;
+}
+
+.incorporacao-clima iframe {
+    height: 430px;
+}
+
+.incorporacao-voos iframe {
+    height: 560px;
+}
+
+.cartao-meteorologia {
+    min-width: 0;
+}
+
+/* 13. Rodapé */
+.rodape {
+    padding: 28px 0 16px;
+    color: #e2e8f0;
+    background-color: var(--azul-escuro);
+}
+
+.rodape-conteudo {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.rodape strong {
+    color: var(--branco);
+}
+
+.rodape p {
+    margin: 5px 0;
+    color: #cbd5e1;
+    font-size: 13px;
+}
+
+.rodape-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.rodape-links a {
+    color: #e2e8f0;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.copyright {
+    margin-top: 20px;
+    padding-top: 14px;
+    border-top: 1px solid #ffffff25;
+    color: #cbd5e1;
+    font-size: 12px;
+}
+
+/* 14. Ajustes para celulares e telas pequenas */
+@media (max-width: 800px) {
+    .cabecalho-conteudo {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .destaque-conteudo,
+    .duas-colunas {
+        grid-template-columns: 1fr;
+    }
+
+    .grade-quatro {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grade,
+    .contato-grade {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 520px) {
+    .container {
+        width: 92%;
+    }
+
+    .menu {
+        gap: 3px;
+    }
+
+    .incorporacao iframe {
+        height: 360px;
+    }
+
+    .incorporacao-clima iframe {
+        height: 380px;
+    }
+
+    .menu a {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .destaque {
+        padding: 42px 0;
+    }
+
+    .grade,
+    .grade-quatro,
+    .contato-grade {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-pagina h1 {
+        font-size: 28px;
+    }
+
+    .secao {
+        padding: 32px 0;
+    }
+}

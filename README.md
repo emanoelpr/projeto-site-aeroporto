@@ -12,6 +12,7 @@ O objetivo é apresentar um modelo de site institucional de aeroporto, com pági
 - `sobre.html` — apresentação do aeroporto e espaço para dados técnicos.
 - `informacoes.html` — perguntas frequentes que abrem e fecham com os elementos HTML `details` e `summary`.
 - `styles.css` — cores, tamanhos, posicionamento e adaptação para celular.
+- `imagens/` — pasta destinada às imagens utilizadas como planos de fundo das seções.
 
 ## Como abrir
 

@@ -25,7 +25,7 @@ O objetivo é apresentar um modelo de site institucional de aeroporto, com pági
 
 O site não precisa de servidor nem de instalação de bibliotecas. Basta abrir o arquivo HTML no navegador.
 
-## Como explicar o projeto
+## Como o projeto funciona
 
 ### HTML
 HTML organiza o conteúdo. Por exemplo:

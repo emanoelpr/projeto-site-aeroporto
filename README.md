@@ -1,6 +1,8 @@
 # Aeroporto Municipal Prefeito José Cleto
 
-Este projeto foi desenvolvido por Emanoel do Prado para estudo e apresentação no módulo Desenvolvimento Web. O site utiliza exclusivamente HTML5 e CSS3, sem JavaScript, conforme as exigências propostas para a atividade.
+**Autor**: Emanoel do Prado
+
+Este projeto foi desenvolvido para estudo e apresentação no módulo Desenvolvimento Web. O site utiliza exclusivamente HTML5 e CSS3, sem JavaScript, conforme as exigências propostas para a atividade.
 
 O objetivo é apresentar um modelo de site institucional de aeroporto, com páginas informativas, tabelas demonstrativas, cartões de serviços, perguntas frequentes e incorporações de mapas externos.
 

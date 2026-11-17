@@ -108,8 +108,7 @@ summary:focus {
     font-size: 14px;
 }
 
-.menu a:hover,
-.menu a.atual {
+.menu a:hover {
     color: var(--azul);
     background-color: #eff6ff;
 }

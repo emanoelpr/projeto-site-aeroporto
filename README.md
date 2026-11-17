@@ -1,5 +1,7 @@
 # Aeroporto Municipal Prefeito José Cleto
 
+**Autor**: Emanoel do Prado
+
 Este projeto foi desenvolvido para estudo e apresentação no módulo Desenvolvimento Web. O site utiliza exclusivamente HTML5 e CSS3, sem JavaScript, conforme as exigências propostas para a atividade.
 
 O objetivo é apresentar um modelo de site institucional de aeroporto, com páginas informativas, tabelas demonstrativas, cartões de serviços, perguntas frequentes e incorporações de mapas externos.
@@ -23,7 +25,7 @@ O objetivo é apresentar um modelo de site institucional de aeroporto, com pági
 
 O site não precisa de servidor nem de instalação de bibliotecas. Basta abrir o arquivo HTML no navegador.
 
-## Como explicar o projeto
+## Como o projeto funciona
 
 ### HTML
 HTML organiza o conteúdo. Por exemplo:
@@ -76,7 +78,7 @@ Como não há JavaScript nem servidor, os voos são exemplos fixos: não há bus
 
 ## Mapas externos (sem JavaScript)
 
-- `voos.html` incorpora um mapa de rastreamento de aeronaves do Flightradar24, centrado na região de União da Vitória. Se o provedor bloquear a incorporação no navegador, há um link para abrir o mapa externo. A cobertura regional pode ser limitada.
+- `voos.html` incorpora um mapa de rastreamento de aeronaves do ADS-B Exchange, centralizado na região de União da Vitória (PR). O mapa utiliza as coordenadas geográficas da região e permite visualizar aeronaves identificadas pelo serviço.
 - `informacoes.html` incorpora o mapa meteorológico do Windy, também centrado em União da Vitória. O mapa depende de conexão com a internet.
 - As incorporações usam apenas HTML (`iframe`) e CSS; o projeto não inclui JavaScript próprio. Serviços externos podem alterar suas políticas de incorporação ou exigir condições de uso específicas.
 - O mapa de aeronaves não deve ser tratado como painel oficial de partidas e chegadas, e o mapa meteorológico não substitui avisos oficiais nem informações operacionais do aeroporto.
